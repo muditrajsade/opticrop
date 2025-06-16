@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OptiCrop - Home</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
 <body>
   <!-- NAVIGATION BAR -->
   <nav class="navbar">
     <div class="logo">OptiCrop</div>
     <ul class="nav-links">
-      <li><a href="home.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="FindYourCrop.html">Find Your Crop</a></li> <!-- New Link -->
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/FindYourCrop">Find Your Crop</a></li> <!-- Fixed Link -->
     </ul>
   </nav>
 
@@ -25,7 +25,7 @@
         OptiCrop is a smart crop prediction system that helps farmers make
         data-driven decisions for better yield.
       </p>
-      <a href="about.html" class="glow-button">Learn More</a>
+      <a href="/about" class="glow-button">Learn More</a> <!-- Fixed Link -->
     </div>
   </div>
 

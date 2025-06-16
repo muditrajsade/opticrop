@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Find Your Crop</title>
-  <link rel="stylesheet" href="findyourcrop.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='FindYourCrop.css') }}">
 </head>
 <body>
   <div class="bg-overlay"></div>
@@ -14,8 +14,9 @@
 
   <div class="form-container">
     <h2>Find Your Best Crop</h2>
-    <!-- POST to /predict -->
-    <form method="POST" action="/predict">
+
+    <!-- POST to same route (FindYourCrop) -->
+    <form method="POST" action="{{ url_for('FindYourCrop') }}">
       <input type="text" name="N" placeholder="Nitrogen (N)" required>
       <input type="text" name="P" placeholder="Phosphorus (P)" required>
       <input type="text" name="K" placeholder="Potassium (K)" required>
@@ -25,12 +26,13 @@
       <input type="text" name="rainfall" placeholder="Rainfall (mm)" required>
       <button type="submit">Predict Crop</button>
     </form>
-    
+
     {% if prediction %}
       <div class="flask-output">🌱 <strong>Recommended Crop:</strong> {{ prediction }}</div>
     {% endif %}
   </div>
 
-  <a href="home.html" class="back-button">← Back to home</a>
+  <!-- ✅ Flask route to home -->
+  <a href="{{ url_for('home') }}" class="back-button">← Back to Home</a>
 </body>
 </html>
