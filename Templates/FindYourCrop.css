@@ -1,0 +1,102 @@
+/* BACKGROUND IMAGE */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("images/FindMyCrop_bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* OVERLAY */
+.bg-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* LOGO BAR */
+.logo-bar {
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+}
+
+/* FORM CONTAINER */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2em;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.form-container h2 {
+  color: cyan;
+  margin-bottom: 1em;
+}
+
+.form-container input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: cyan;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1em;
+  box-shadow: 0 0 10px cyan;
+}
+
+.form-container button:hover {
+  box-shadow: 0 0 20px cyan;
+}
+
+.flask-output {
+  margin-top: 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: lightgreen;
+}
+
+/* BACK BUTTON - fixed to bottom left */
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: #00ffcc;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffcc;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background: #00ddb3;
+  box-shadow: 0 0 20px #00ffcc;
+}

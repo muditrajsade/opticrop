@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Your Crop</title>
+  <link rel="stylesheet" href="findyourcrop.css">
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <div class="logo-bar">
+    <div class="logo">FindYourCrop</div>
+  </div>
+
+  <div class="form-container">
+    <h2>Find Your Best Crop</h2>
+    <!-- POST to /predict -->
+    <form method="POST" action="/predict">
+      <input type="text" name="N" placeholder="Nitrogen (N)" required>
+      <input type="text" name="P" placeholder="Phosphorus (P)" required>
+      <input type="text" name="K" placeholder="Potassium (K)" required>
+      <input type="text" name="temperature" placeholder="Temperature (°C)" required>
+      <input type="text" name="humidity" placeholder="Humidity (%)" required>
+      <input type="text" name="ph" placeholder="pH Level" required>
+      <input type="text" name="rainfall" placeholder="Rainfall (mm)" required>
+      <button type="submit">Predict Crop</button>
+    </form>
+    
+    {% if prediction %}
+      <div class="flask-output">🌱 <strong>Recommended Crop:</strong> {{ prediction }}</div>
+    {% endif %}
+  </div>
+
+  <a href="home.html" class="back-button">← Back to home</a>
+</body>
+</html>
